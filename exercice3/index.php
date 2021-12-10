@@ -31,13 +31,13 @@
         </p>
 <?php
     } else {
-        foreach ($_GET as $value) { ?>
-            <p>
-                <?=$value;?>
-            </p>
+        $startDate = $_GET["startDate"];
+        $endDate = $_GET["endDate"]; ?>
+        <p>
+            <?="Vous avez été en formation du $startDate au $endDate"?>
+        </p>
 <?php
         }
-    }
 
 ?>
 

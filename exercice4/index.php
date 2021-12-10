@@ -23,21 +23,23 @@
     </div>
     <button type="submit" class="btn btn-warning">Envoyer</button>
 </form> -->
+
+
 <?php
 
-    if (!isset($_GET['startDate']) || !isset($_GET['endDate']) ) { ?>
+    if (!isset($_GET['language']) || !isset($_GET['server']) ) { ?>
         <p>
-            <?='Il faut une date de début et une date de fin pour soumettre le formulaire.';?>
+            <?='Il faut saisir un langage de programmation et <br> un serveur local pour soumettre le formulaire.';?>
         </p>
 <?php
     } else {
-        foreach ($_GET as $value) { ?>
-            <p>
-                <?=$value;?>
-            </p>
+        $language = $_GET["language"];
+        $server = $_GET["server"]; ?>
+        <p>
+            <?="Vous adorez le langage $language et vous utilisez le serveur $server"?>
+        </p>
 <?php
         }
-    }
 
 ?>
 

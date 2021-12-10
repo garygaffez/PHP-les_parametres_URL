@@ -23,20 +23,20 @@
     </div>
     <button type="submit" class="btn btn-warning">Envoyer</button>
 </form> -->
-<?php
 
-    if (!isset($_GET['age'])) { ?>
+
+<?php
+    if (!isset($_GET['age'])) {
+        echo '<p>Il faut un âge pour soumettre le formulaire.</p>';
+    } else { 
+        $age = $_GET["age"];
+                  // méthode 1 pour afficher dans le html
+        echo "Vous avez $age ans"; ?>
+                <!-- méthode 2 pour afficher dans le html-->
         <p>
-            <?='Il faut un âge pour soumettre le formulaire.';?>
+            <?="Vous avez $age ans"?>
         </p>
-<?php
-    } else {
-        foreach ($_GET as $value) { ?>
-            <p>
-                <?=$value;?>
-            </p>
-<?php
-        }
+    <?php
     }
 
 ?>

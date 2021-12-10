@@ -22,13 +22,14 @@
         <input type="text" class="form-control" name="firstname">
     </div>
     <button type="submit" class="btn btn-warning">Envoyer</button> 
-</form>-->
+</form> -->
+
+
+
 <?php
 
     if (!isset($_GET['lastname']) || !isset($_GET['firstname'])) { ?>
-        <p>
-            <?='Il faut un lastname et un firstname pour soumettre le formulaire.';?>
-        </p>
+        <p>Il faut un lastname et un firstname pour soumettre le formulaire.</p>
 <?php
     } else {
         foreach ($_GET as $value) { ?>
@@ -37,6 +38,26 @@
             </p>
 <?php
         }
+    }
+
+?>
+
+
+
+
+<?php
+    if (!isset($_GET['lastname']) || !isset($_GET['firstname'])) {
+        echo '<p>Il faut un lastname et un firstname pour soumettre le formulaire.</p>';
+    } else { 
+        $firstname = $_GET["firstname"];
+        $lastname = $_GET["lastname"];
+                // méthode 1 pour afficher dans le html
+        echo "Votre prénom est $firstname "; ?>
+                <!-- méthode 2 pour afficher dans le html-->
+        <p>
+            <?="Votre nom est $lastname"?>
+        </p>
+    <?php
     }
 
 ?>
