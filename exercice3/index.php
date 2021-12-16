@@ -31,8 +31,8 @@
         </p>
 <?php
     } else {
-        $startDate = $_GET["startDate"];
-        $endDate = $_GET["endDate"]; ?>
+        $startDate = htmlspecialchars($_GET["startDate"]);
+        $endDate = htmlspecialchars($_GET["endDate"]);?>
         <p>
             <?="Vous avez été en formation du $startDate au $endDate"?>
         </p>

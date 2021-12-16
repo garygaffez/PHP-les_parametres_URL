@@ -28,7 +28,7 @@
 
 <?php
 
-    if (!isset($_GET['lastname']) || !isset($_GET['firstname'])) { ?>
+    if (!isset($_GET['lastname']) && !isset($_GET['firstname'])) { ?>
         <p>Il faut un lastname et un firstname pour soumettre le formulaire.</p>
 <?php
     } else {

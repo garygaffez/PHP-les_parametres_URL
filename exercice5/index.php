@@ -31,7 +31,7 @@
         </p>
 <?php
     } else {
-        $week = $_GET["week"]; ?>
+        $week = htmlspecialchars($_GET["week"]); ?>
         <p>
             <?="Votre réservation pour la semaine $week a bien été pris en compte"?>
         </p>

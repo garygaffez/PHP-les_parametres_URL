@@ -31,8 +31,8 @@
         </p>
 <?php
     } else {
-        $building = $_GET["building"];
-        $room = $_GET["room"]; ?>
+        $building = htmlspecialchars($_GET["building"]);
+        $room = htmlspecialchars($_GET["room"]); ?>
         <p>
             <?="Votre réservation pour la chambre $room dans l'hôtel $building a bien été pris en compte"?>
         </p>

@@ -29,7 +29,7 @@
     if (!isset($_GET['age'])) {
         echo '<p>Il faut un âge pour soumettre le formulaire.</p>';
     } else { 
-        $age = $_GET["age"];
+        $age = htmlspecialchars($_GET["age"]);
                   // méthode 1 pour afficher dans le html
         echo "Vous avez $age ans"; ?>
                 <!-- méthode 2 pour afficher dans le html-->

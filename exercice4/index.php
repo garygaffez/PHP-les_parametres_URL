@@ -33,8 +33,8 @@
         </p>
 <?php
     } else {
-        $language = $_GET["language"];
-        $server = $_GET["server"]; ?>
+        $language = htmlspecialchars($_GET["language"]);
+        $server = htmlspecialchars($_GET["server"]); ?>
         <p>
             <?="Vous adorez le langage $language et vous utilisez le serveur $server"?>
         </p>
